@@ -56,9 +56,9 @@
             document.getElementById("boton3").disabled = false;
             document.getElementById(e).disabled = true;
             const imgPathMap = {
-                boton1: { motor: "izquierda.gif", background: "viento-izquierda.gif" },
-                boton2: { motor: "detenido.gif", background: "" },
-                boton3: { motor: "derecha.gif", background: "viento.gif" }
+                boton1: { motor: "izquierda.gif"},
+                boton2: { motor: "detenido.gif"},
+                boton3: { motor: "derecha.gif"}
             };
             document.getElementById("motor").src = `{{ url_for("static", filename="img/") }}${imgPathMap[e].motor}`;
             document.getElementById("body").style.backgroundImage = imgPathMap[e].background ? `url('{{ url_for('static', filename='img/') }}${imgPathMap[e].background}')` : "none";
